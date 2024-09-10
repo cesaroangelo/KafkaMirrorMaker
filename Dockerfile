@@ -21,7 +21,5 @@ RUN mkdir /opt/kafka/config_default && cp /opt/kafka/config/* /opt/kafka/config_
 
 RUN chmod a+x /usr/bin/start-kafkaMirrorMaker.sh
 WORKDIR $KAFKA_HOME
-
 ## Use "exec" form so that it runs as PID 1 (useful for graceful shutdown)
-
 CMD ["start-kafkaMirrorMaker.sh"]
